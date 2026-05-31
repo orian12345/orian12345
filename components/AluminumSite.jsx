@@ -322,7 +322,7 @@ function Services({ t }) {
         <SectionHead eyebrow="השירותים שלנו" title="כל מה שצריך מעסק אחד" sub="עבודות אלומיניום מקצה לקצה - מהמדידה ועד ההתקנה והאחריות. הכל בבית, בלי לרוץ בין ספקים."/>
         <div className="services-grid" style={{ display:"grid",gridTemplateColumns:"repeat(4,1fr)",gap:16,marginTop:56 }}>
           {SERVICES.map((s,i)=>(
-            <div key={s.id} onMouseEnter={()=>setActive(i)} onMouseLeave={()=>setActive(null)} style={{ background:active===i?P.surface2:P.surface,border:`1px solid ${active===i?P.accent+"55":P.border}`,borderRadius:16,padding:24,cursor:"pointer",transition:"all .3s cubic-bezier(.2,.8,.2,1)",transform:active===i?"translateY(-6px)":"translateY(0)",boxShadow:active===i?`0 20px 40px rgba(0,0,0,.3)`:none,position:"relative",overflow:"hidden" }}>
+            <div key={s.id} onMouseEnter={()=>setActive(i)} onMouseLeave={()=>setActive(null)} style={{ background:active===i?P.surface2:P.surface,border:`1px solid ${active===i?P.accent+"55":P.border}`,borderRadius:16,padding:24,cursor:"pointer",transition:"all .3s cubic-bezier(.2,.8,.2,1)",transform:active===i?"translateY(-6px)":"translateY(0)",boxShadow:active===i?`0 20px 40px rgba(0,0,0,.3)`:"none",position:"relative",overflow:"hidden" }}>
               <div style={{ width:48,height:48,borderRadius:12,background:`linear-gradient(135deg,${P.accent}22,${P.accent2}22)`,border:`1px solid ${P.border}`,display:"grid",placeItems:"center",color:P.accent,marginBottom:16 }}><Icon name={s.icon} size={22} stroke={P.accent}/></div>
               <h3 style={{ fontSize:18,fontWeight:700,color:P.text,margin:"0 0 8px" }}>{s.title}</h3>
               <p style={{ fontSize:13,color:P.muted,lineHeight:1.55,margin:"0 0 14px" }}>{s.desc}</p>
